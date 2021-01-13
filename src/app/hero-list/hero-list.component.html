@@ -1,9 +1,9 @@
-
-<ul>
-  <li *ngFor="let hero of heroList">
-      Hero Name: {{hero.name}}
-  </li>
-</ul>
-
-
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 mx-auto my-5" *ngFor="let hero of heroList">
+      <div>{{ hero.name }}<div>
+        <div><img mat-card-image src={{hero.iconPath}} alt="error" width="128" height="72"></div>
+      
+    </div>
+  </div>
+</div>

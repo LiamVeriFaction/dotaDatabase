@@ -3,7 +3,7 @@ export interface Hero{
   name: string,
   primary_attr: string,
   attack_type: string,
-  roles: string[]
-
+  roles: string[],
+  iconPath: string
 
 }

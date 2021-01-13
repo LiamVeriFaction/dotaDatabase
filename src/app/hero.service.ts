@@ -16,19 +16,28 @@ export class HeroService {
     this.url = 'https://api.opendota.com/api/heroes';
     return this.http.get<Hero[]>(this.url).pipe(
       map(heroList => heroList.map(
-        hero =>  this.extractHero(hero)
+        hero =>  this.extractHero(<APIHero><unknown>hero)
       ))
-
     );
   }
-  extractHero(heroData: any): Hero {
-    let hero: Hero = {
-      id: heroData['id'],
-      name: heroData['localized_name'],
-      primary_attr: heroData['primary_attr'],
-      attack_type: heroData['attack_type'],
-      roles: heroData['roles'],
-    };
+  extractHero(heroData: APIHero): Hero {
+     let hero: Hero = {
+      id: heroData.id,
+      name: heroData.localized_name,
+      primary_attr: heroData.primary_attr,
+      attack_type: heroData.attack_type,
+      roles: heroData.roles,
+      iconPath: '../assets/images/heroes/'+heroData.localized_name.toLocaleLowerCase()+'.png'
+    }; 
     return hero;
   }
+}
+
+export interface APIHero{
+  id: number,
+  name: string,
+  localized_name: string,
+  primary_attr: string,
+  attack_type: string,
+  roles: string[]
 }
