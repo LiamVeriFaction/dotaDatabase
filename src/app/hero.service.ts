@@ -29,6 +29,7 @@ export class HeroService {
       roles: heroData.roles,
       iconPath: '../assets/images/heroes/'+heroData.localized_name.toLocaleLowerCase()+'.png'
     }; 
+    //console.log(hero)
     return hero;
   }
 }

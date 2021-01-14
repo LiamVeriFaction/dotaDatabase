@@ -1,9 +1,38 @@
-This is the App Module
+<h1>Dota 2 Heroes</h1>
 
-<button mat-flat-button color="primary">Hello World</button>
+<div class="col-md">
+  <button
+    mat-flat-button
+    color="primary"
+    [class.active]="filter === 'all'"
+    (click)="filter = 'all'"
+  >
+    All
+  </button>
+  <button
+    mat-flat-button
+    color="primary"
+    [class.active]="filter === 'str'"
+    (click)="filter = 'str'"
+  >
+    Strength
+  </button>
+  <button
+    mat-flat-button
+    color="primary"
+    [class.active]="filter === 'agi'"
+    (click)="filter = 'agi'"
+  >
+    Agility
+  </button>
+  <button
+    mat-flat-button
+    color="primary"
+    [class.active]="filter === 'int'"
+    (click)="filter = 'int'"
+  >
+    Intelligence
+  </button>
+</div>
 
-
-
-<hero-list></hero-list>
-
-
+<hero-list [filter]="filter"></hero-list>

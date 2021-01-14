@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { HeroCardComponent } from './hero-card/hero-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroListComponent
+    HeroListComponent,
+    HeroCardComponent
   ],
   imports: [
     BrowserModule,
