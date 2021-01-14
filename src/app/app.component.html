@@ -1,38 +1,4 @@
 <h1>Dota 2 Heroes</h1>
 
-<div class="col-md">
-  <button
-    mat-flat-button
-    color="primary"
-    [class.active]="filter === 'all'"
-    (click)="filter = 'all'"
-  >
-    All
-  </button>
-  <button
-    mat-flat-button
-    color="primary"
-    [class.active]="filter === 'str'"
-    (click)="filter = 'str'"
-  >
-    Strength
-  </button>
-  <button
-    mat-flat-button
-    color="primary"
-    [class.active]="filter === 'agi'"
-    (click)="filter = 'agi'"
-  >
-    Agility
-  </button>
-  <button
-    mat-flat-button
-    color="primary"
-    [class.active]="filter === 'int'"
-    (click)="filter = 'int'"
-  >
-    Intelligence
-  </button>
-</div>
+<heroes></heroes>
 
-<hero-list [filter]="filter"></hero-list>

@@ -8,5 +8,4 @@ import { Hero } from 'src/hero';
 })
 export class AppComponent {
   title = 'DotaHero';
-  filter : string = 'all';
 }

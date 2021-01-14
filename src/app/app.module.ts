@@ -9,12 +9,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HeroCardComponent } from './hero-card/hero-card.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroListComponent,
-    HeroCardComponent
+    HeroCardComponent,
+    SearchBarComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,

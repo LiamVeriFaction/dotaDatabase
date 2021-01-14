@@ -1,0 +1,64 @@
+<div class="button-row">
+  <div class="button-group">
+    Filter By:
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="filter === 'all'"
+      (click)="filter = 'all'"
+    >
+      All
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="filter === 'str'"
+      (click)="filter = 'str'"
+    >
+      Strength
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="filter === 'agi'"
+      (click)="filter = 'agi'"
+    >
+      Agility
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="filter === 'int'"
+      (click)="filter = 'int'"
+    >
+      Intelligence
+    </button>
+  </div>
+
+  <div class="button-group">
+    Sort By:
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="sortBy === 'id'"
+      (click)="sortBy = 'id'"
+    >
+      ID
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      [class.active]="sortBy === 'name'"
+      (click)="sortBy = 'name'"
+    >
+      Name
+    </button>
+  </div>
+
+  <div class="search">
+    <search-bar (searchTerm)="newSearch($event)"></search-bar>
+
+  </div>
+</div>
+
+<hero-list [filter]="filter" [sortOrder]="sortBy" [heroSearch]="heroSearch"></hero-list>
