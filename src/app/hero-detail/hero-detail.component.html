@@ -1,0 +1,9 @@
+<div *ngIf="heroOb$ | async as hero">
+
+  New Hero
+  Hero ID: {{ hero.id }} 
+  Hero Name: {{ hero.name }} 
+  Attack Type: {{ hero.attack_type }} 
+  Roles: {{ hero.roles }}
+  <img mat-card-image src="{{ hero.iconPath }}" width="128" height="72" /> 
+</div>

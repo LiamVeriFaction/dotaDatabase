@@ -1,10 +1,15 @@
-<div class="hero-card">
-  <div>
-    <h2>{{ hero.name }}</h2>
+<div [routerLink]="['/heroes',hero.id]" class="hero-card">
     <div>
+      <h2>{{ hero.name }}</h2>
       <div>
-        <img mat-card-image src="{{ hero.iconPath }}" width="128" height="72" />
+        <div>
+          <img
+            mat-card-image
+            src="{{ hero.iconPath }}"
+            width="128"
+            height="72"
+          />
+        </div>
       </div>
     </div>
-  </div>
 </div>

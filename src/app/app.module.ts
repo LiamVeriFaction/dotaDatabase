@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HeroCardComponent } from './hero-card/hero-card.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeroesComponent } from './heroes/heroes.component';
     HeroListComponent,
     HeroCardComponent,
     SearchBarComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
